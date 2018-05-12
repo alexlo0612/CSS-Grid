@@ -1,0 +1,78 @@
+html {
+  /*box-sizing: border-box;*/
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: grey;
+}
+
+.item {
+  /*margin: 1em;*/
+  display: grid;
+  font-size: 20px;
+  background: aqua;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+}
+
+.container {
+  display: grid;
+  grid-gap: 20px;
+  border: 5px solid;
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-rows: 150px 150px 100px;
+  grid-template-areas:
+    "sidebar-1 content sidebar-2"
+    "sidebar-1 content sidebar-2"
+    "footer footer footer";
+  /* footer footer . --> dot means empty space*/
+  margin-bottom: 1rem;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.item1 {
+  grid-area: sidebar-1;
+}
+
+.item2 {
+  grid-area: content;
+}
+
+.item3 {
+  grid-area: sidebar-2;
+}
+
+/* Media Queries to Redefine the Panels Arrangement */
+@media (max-width: 700px) {
+  .container {
+    grid-template-areas:
+      "cotent content content"
+      "sidebar-1 sidebar-1 sidebar-2"
+      "footer footer footer";
+  }
+}
+
+.container2 {
+  display: grid;
+  grid-gap: 20px;
+  border: 5px solid;
+  grid-template-areas:
+    "a a a a a b b b b b"
+    "a a a a a b b b b b"
+    "a a a a a b b b b b";
+}
+
+.item5 {
+  /* grid-area: a; covers up all grid area labeled 
+  "a" and creates implicit grids*/
+
+  grid-column: a-start / b-end; /*spans from the
+  start of "a" to the end of "b"*/
+
+  /* can be used with rows too */
+}

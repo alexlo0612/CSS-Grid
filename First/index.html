@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS GRID</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        .wrapper{
+            display: grid;
+            grid-template-columns: 70% 30%;
+            /*grid-column-gap: 1em;
+            grid-row-gap: 1em;*/
+            grid-gap: 1em;
+        }
+        .wrapper > div {
+            background: #eee;
+            padding: 1em;
+        }
+        .wrapper > div:nth-child(odd){
+            background: #ddd;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            Lorem ipsmasda
+            sdasd
+            asdasdasd
+            asd
+            asd
+            asdfasdfasdf
+            asdfasdfasdf3232
+            asdasdasdasasd
+        </div>
+        <div>
+            asdasdasd222222
+            213412341234
+            1234123412341235
+            123412341234
+        </div>
+        <div>
+            Lorem ipsmasda
+            sdasd
+            asdasdasd
+            asd
+            asd
+            asdfasdfasdf
+            asdfasdfasdf3232
+            asdasdasdasasd
+        </div>
+        <div>
+            asdasdasd222222
+            213412341234
+            1234123412341235
+            123412341234
+        </div>
+    </div>
+</body>
+</html>
